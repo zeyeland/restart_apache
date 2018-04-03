@@ -21,5 +21,8 @@ then
     # Enable a vhost configuration
     sudo a2ensite "$CONFIG"
     sudo service apache2 "$COMMAND"
+else
+    echo "ERROR: $COMMAND is an invalid service command {restart|reload}"
+    exit 1
 fi
 
